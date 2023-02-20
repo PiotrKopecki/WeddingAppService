@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/wedding-app-db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: user
+    password: user
+  cloud:
+    gcp:
+      sql:
+        enabled:  false
+api:
+  url: api/v1

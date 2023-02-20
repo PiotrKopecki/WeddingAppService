@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.wedding.app'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+ext {
+    springBootVersion = '3.0.2'
+    springSecurityVersion = '5.7.3'
+    springBootDataJpaVersion = '3.0.2'
+    lombokVersion = '1.18.24'
+    mapStructVersion = '1.5.3.Final'
+    junitVersion = '5.9.0'
+    mockitoVersion = '4.8.0'
+    mysqlConnectorVersion = '8.0.31'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    implementation "org.springframework.boot:spring-boot-starter-security:$springBootVersion"
+    implementation "org.springframework.security:spring-security-oauth2-client:$springSecurityVersion"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:$springBootDataJpaVersion"
+    implementation "mysql:mysql-connector-java:$mysqlConnectorVersion"
+
+    implementation "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    implementation "org.mapstruct:mapstruct:$mapStructVersion"
+    implementation "org.mapstruct:mapstruct-processor:$mapStructVersion"
+    annotationProcessor "org.mapstruct:mapstruct-processor:$mapStructVersion"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test:$springBootVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.springframework.security:spring-security-test:$springSecurityVersion"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
