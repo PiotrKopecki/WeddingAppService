@@ -13,6 +13,7 @@ docker run
 -d mysql:8 
 ```
 
+
 ### In one line:
 ```docker run --name mysqldb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=wedding-app-db -e MYSQL_USER=user -e MYSQL_PASSWORD=user -d mysql:8 ```
 
