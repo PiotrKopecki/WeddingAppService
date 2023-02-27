@@ -14,5 +14,17 @@ spring:
   sql:
     init:
       mode: always
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: weddingappservice@gmail.com
+    password: hudvutplmvzfcwbk
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
 api:
   url: ${API-URL}
