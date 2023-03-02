@@ -17,6 +17,7 @@ ext {
     junitVersion = '5.9.0'
     mockitoVersion = '4.8.0'
     mysqlConnectorVersion = '8.0.31'
+    springBootStarterMailVersion = '3.0.3'
 }
 
 configurations {
@@ -35,6 +36,7 @@ dependencies {
     implementation "org.springframework.security:spring-security-oauth2-client:$springSecurityVersion"
     implementation "org.springframework.boot:spring-boot-starter-data-jpa:$springBootDataJpaVersion"
     implementation "mysql:mysql-connector-java:$mysqlConnectorVersion"
+    implementation "org.springframework.boot:spring-boot-starter-mail:$springBootStarterMailVersion"
 
     implementation "org.projectlombok:lombok:$lombokVersion"
     annotationProcessor "org.projectlombok:lombok:$lombokVersion"
