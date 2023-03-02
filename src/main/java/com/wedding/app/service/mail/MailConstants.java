@@ -14,7 +14,7 @@ public class MailConstants {
 	public static String getText(MailDto mailDto) {
 		String text = "";
 		text += "Guest: " + mailDto.getGuestName() + " " + mailDto.getGuestSurname();
-		if (mailDto.isComing()) {
+		if (mailDto.getIsComing()) {
 			text += " is coming";
 			if (mailDto.getAccompanyingPersonDto() != null) {
 				text += "\nwith person " + mailDto.getAccompanyingPersonDto().getName() + " "

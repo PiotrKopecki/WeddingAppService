@@ -9,6 +9,6 @@ public class MailDto {
 	private String mail;
 	private String guestName;
 	private String guestSurname;
-	private boolean isComing;
+	private Boolean isComing;
 	private AccompanyingPersonDto accompanyingPersonDto;
 }
